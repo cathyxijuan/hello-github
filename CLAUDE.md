@@ -1,240 +1,74 @@
-# CLAUDE.md - AI Assistant Guide for hello-github
+# CLAUDE.md
 
-## Repository Overview
+## What this repo is for
 
 **Repository:** cathyxijuan/hello-github
-**Type:** R project
-**Purpose:** Learning/experimental R project for GitHub workflows
-**Current Status:** Active development
 
-This is a minimal R project primarily used for learning GitHub workflows and R programming basics.
+This is a personal sandbox for **learning how to use Claude Code**. The owner
+uses it to practice asking Claude to do things: editing files, running
+commands, using git and GitHub, and trying out Claude Code features.
+
+Nothing here is production code. Experiments are welcome, and files may come
+and go as different features get tried out.
 
 ---
 
-## Project Structure
+## How Claude should help here
+
+The goal is learning, not just getting the task done. When working in this
+repo:
+
+- **Explain as you go.** Briefly say what you are doing and why, especially
+  for git, GitHub, and terminal steps. Assume the owner is still learning
+  these tools.
+- **Name the feature.** When you use a Claude Code feature (subagents, skills,
+  slash commands, hooks, plan mode, CLAUDE.md, etc.), mention it by name so the
+  owner learns it exists.
+- **Show the commands.** When you run a git or shell command the owner might
+  want to run themselves later, show it.
+- **Keep changes small.** Make one focused change at a time so each step is
+  easy to follow and review.
+- **Ask when unclear.** If a request is ambiguous, especially anything that
+  deletes or overwrites files, ask before acting.
+- **Suggest next steps.** After finishing a task, it's helpful to suggest a
+  related thing to try next.
+
+---
+
+## Things not to touch
+
+- **`cathyxijuan/cathyxijuan.github.io` and the ubcsemlab.com website.** That
+  repo hosts a lab website. Never push to it, change it, or publish anything
+  that would show up under ubcsemlab.com.
+- **GitHub Pages for this repo.** Don't enable or deploy GitHub Pages from this
+  repo: the account's Pages domain is ubcsemlab.com, so any site published from
+  here would appear under the lab's domain.
+
+---
+
+## Repo contents
 
 ```
 hello-github/
-├── .git/                    # Git version control directory
-├── .gitignore              # Git ignore rules for R-specific files
-└── CLAUDE.md               # This file - AI assistant guide
+├── .gitignore    # Ignores R/RStudio temp files (.Rproj.user, .Rhistory, .RData)
+└── CLAUDE.md     # This file: instructions Claude reads at the start of every session
 ```
 
-### Key Files
-
-- **.gitignore** (`/home/user/hello-github/.gitignore:1`): Excludes R temporary files (.Rproj.user, .Rhistory, .RData)
-
 ---
 
-## Technology Stack
+## Conventions
 
-### Primary Technologies
-- **R**: Statistical computing and graphics language
-- **R Studio**: Integrated development environment for R
-- **Git**: Version control system
-
-### Development Environment
-- **Encoding:** UTF-8
-- **Workspace Management:** Default restore/save behavior
-- **Code Indexing:** Enabled
-
----
-
-## Code Standards and Conventions
-
-### Formatting Rules
-- **Indentation:** Use spaces, NOT tabs
-- **Indent Size:** 2 spaces per indentation level
 - **Encoding:** UTF-8 for all text files
-- **Line Endings:** Follow R Studio defaults
+- **Indentation:** 2 spaces, no tabs
+- **Default branch:** `master`
 
-### R-Specific Conventions
-- **Weave Engine:** Sweave for R Markdown documents
-- **LaTeX Engine:** pdfLaTeX for PDF generation
-- **Workspace:** Default restore and save settings enabled
-- **History:** Always save R command history
+### Git workflow
 
----
-
-## Git Workflow
-
-### Branch Naming Convention
-This project uses Claude-specific branch naming:
-- **Format:** `claude/claude-md-milhg90t2qo2mlec-01SiNCvA7gMWoyNZyhcSL75S`
-- **Pattern:** `claude/<descriptive-name>-<session-id>`
-- **Current Branch:** `claude/claude-md-milhg90t2qo2mlec-01SiNCvA7gMWoyNZyhcSL75S`
-
-### Commit History
-Recent commits (from newest to oldest):
-1. `ec5fb4e` - first commit
-2. `acb4c02` - try to commit
-3. `ff43613` - README.md
-
-### Commit Message Guidelines
-- Keep messages concise and descriptive
-- Use present tense ("Add feature" not "Added feature")
-- Reference what changed, not how it changed
-- Examples from this repo: "first commit", "README.md"
-
-### Git Push Requirements
-**CRITICAL:** When pushing changes:
-- Always use: `git push -u origin <branch-name>`
-- Branch MUST start with 'claude/' and end with matching session ID
-- Retry up to 4 times with exponential backoff (2s, 4s, 8s, 16s) on network errors
-- 403 errors indicate branch name mismatch - verify branch name format
-
-### Git Fetch/Pull Requirements
-- Prefer specific branch fetches: `git fetch origin <branch-name>`
-- Retry up to 4 times with exponential backoff on network failures
-- Use: `git pull origin <branch-name>`
-
----
-
-## Development Workflow
-
-### For AI Assistants
-
-1. **Before Making Changes:**
-   - Always read existing files before modifying them
-   - Check current git status: `git status`
-   - Verify you're on the correct branch
-   - Review recent commits to understand context
-
-2. **Making Changes:**
-   - Follow the 2-space indentation convention
-   - Maintain UTF-8 encoding for all files
-   - Keep changes focused and minimal
-   - Don't over-engineer solutions
-
-3. **Committing Changes:**
-   - Stage relevant files: `git add <files>`
-   - Write clear commit messages
-   - Use heredoc format for multi-line messages
-   - Verify commit success with `git status`
-
-4. **Pushing Changes:**
-   - Ensure you're on the correct claude/* branch
-   - Use: `git push -u origin <branch-name>`
-   - Implement retry logic for network failures
-   - Never force push without explicit permission
-
----
-
-## File Ignore Patterns
-
-The `.gitignore` excludes:
-- `.Rproj.user` - R Studio user-specific files
-- `.Rhistory` - R command history
-- `.RData` - R workspace data
-
-**Important:** These files are regenerated by R Studio and should never be committed.
-
----
-
-## AI Assistant Guidelines
-
-### What to Do ✅
-- Read all relevant files before making suggestions
-- Follow the 2-space indentation standard
-- Maintain UTF-8 encoding
-- Keep solutions simple and focused
-- Ask for clarification when requirements are unclear
-- Use the TodoWrite tool for multi-step tasks
-- Commit with descriptive messages
-- Push to the correct claude/* branch
-
-### What NOT to Do ❌
-- Don't modify `.gitignore` without user request
-- Don't create unnecessary files
-- Don't add features beyond what's requested
-- Don't push to branches other than assigned claude/* branch
-- Don't commit R Studio temporary files (.Rproj.user, .Rhistory, .RData)
-- Don't use tabs for indentation (use 2 spaces)
-- Don't skip reading files before editing them
-- Don't force push without explicit permission
-
-### Security Considerations
-- No secrets or credentials should be committed
-- Review `.gitignore` before committing new file types
-- Warn user if they request committing sensitive files
-- Don't expose private data in commit messages
-
----
-
-## Common Tasks
-
-### Creating New R Files
-```r
-# Use 2-space indentation
-# UTF-8 encoding
-# Follow R style guide conventions
-```
-
-### Running R Code
-```bash
-# In R Studio or R console
-Rscript your_script.R
-```
-
-### Checking Project Status
-```bash
-git status                    # Check working tree status
-git log --oneline -10        # View recent commits
-git branch                   # List branches
-```
-
----
-
-## Project Context
-
-This repository appears to be a learning project for:
-- GitHub workflows and version control
-- R programming basics
-- R Studio project management
-- Collaborative development with AI assistants
-
-The simple structure suggests it's in early stages and may evolve to include:
-- R scripts for data analysis
-- R Markdown documents
-- Data files
-- Visualization outputs
-- Statistical models
-
----
-
-## Resources
-
-### R Programming
-- [R Documentation](https://www.r-project.org/other-docs.html)
-- [R Studio IDE](https://posit.co/products/open-source/rstudio/)
-- [R Style Guide](https://style.tidyverse.org/)
-
-### Git & GitHub
-- [Git Documentation](https://git-scm.com/doc)
-- [GitHub Guides](https://guides.github.com/)
-
----
-
-## Change Log
-
-- **2025-11-30**: Initial CLAUDE.md creation
-  - Documented repository structure
-  - Established code conventions
-  - Defined git workflow requirements
-  - Added AI assistant guidelines
-
----
-
-## Questions or Issues?
-
-When encountering issues:
-1. Check git status and current branch
-2. Verify file encodings (should be UTF-8)
-3. Review recent commit history for context
-4. Ensure indentation follows 2-space convention
-5. Ask user for clarification on ambiguous requirements
-
----
-
-**Last Updated:** 2025-11-30
-**Maintained By:** AI assistants working with cathyxijuan/hello-github
+- Work on a `claude/...` branch, never directly on `master`.
+- Changes reach `master` through a pull request that the owner reviews and
+  merges.
+- Commit messages: short, present tense, describe what changed
+  (e.g. "Add example R script").
+- Push with `git push -u origin <branch-name>`.
+- Never force push or rewrite history without explicit permission.
+- Don't commit secrets, credentials, or RStudio temp files.
