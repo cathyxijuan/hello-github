@@ -16,23 +16,11 @@ This is a minimal R project primarily used for learning GitHub workflows and R p
 ```
 hello-github/
 ├── .git/                    # Git version control directory
-├── .github/workflows/
-│   └── publish.yml         # Renders the site and deploys it to GitHub Pages
-├── .gitignore              # Git ignore rules (R files + Quarto output)
-├── _quarto.yml             # Quarto website configuration (navbar, theme)
-├── index.qmd               # Home/about page
-├── projects.qmd            # Projects page
-├── cv.qmd                  # CV page
-├── styles.css              # Custom site styles
-├── images/                 # Site images (profile photo)
+├── .gitignore              # Git ignore rules for R-specific files
+├── README.md               # Project documentation
 ├── second try.Rproj        # R Studio project configuration
 └── CLAUDE.md               # This file - AI assistant guide
 ```
-
-### Personal Website
-The repo hosts a Quarto personal website. Preview locally with `quarto preview`.
-Rendered output (`_site/`, `.quarto/`) is git-ignored; GitHub Actions builds
-and publishes the site on every push to `master`.
 
 ### Key Files
 
