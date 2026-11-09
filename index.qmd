@@ -1,0 +1,39 @@
+---
+title: "Your Name"
+subtitle: "Your role or tagline — e.g. Data analyst & R enthusiast"
+image: images/profile.svg
+about:
+  template: trestles
+  image-shape: round
+  image-width: 14em
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/cathyxijuan
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/   # TODO: your LinkedIn URL
+    - icon: envelope
+      text: Email
+      href: mailto:you@example.com      # TODO: your email
+---
+
+<!-- TODO: Replace the placeholder text below with your own. -->
+
+Hi! I'm **Your Name**. Write two or three sentences here about who you are,
+what you do, and what you're interested in.
+
+## Education
+
+**University Name** \| City, Country \
+Degree, Field of Study \| 20XX – 20XX
+
+## Experience
+
+**Organization** \| Job Title \| 20XX – present
+
+## Interests
+
+- Data analysis and statistics with R
+- Something else you enjoy
+- A hobby or two

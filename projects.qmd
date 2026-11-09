@@ -1,0 +1,26 @@
+---
+title: "Projects"
+---
+
+<!-- TODO: Replace these examples with your own projects. Copy a block to add more. -->
+
+::: {.project-card}
+### Project One
+A short description of what this project is, what you did, and what you learned.
+
+**Tools:** R, ggplot2 · [View on GitHub](https://github.com/cathyxijuan)
+:::
+
+::: {.project-card}
+### Project Two
+A short description of what this project is, what you did, and what you learned.
+
+**Tools:** R, Quarto · [Read more](#)
+:::
+
+::: {.project-card}
+### Project Three
+A short description of what this project is, what you did, and what you learned.
+
+**Tools:** Git, GitHub · [Read more](#)
+:::
